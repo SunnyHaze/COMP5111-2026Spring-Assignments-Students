@@ -12,6 +12,8 @@
         <jdk.version>11</jdk.version>
         <maven.compiler.source>${jdk.version}</maven.compiler.source>
         <maven.compiler.target>${jdk.version}</maven.compiler.target>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     </properties>
 
 
@@ -51,6 +53,21 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>2.20</version>
+            </plugin>
+            <plugin>
+            <groupId>org.evosuite.plugins</groupId>
+            <artifactId>evosuite-maven-plugin</artifactId>
+            <version>1.2.0</version>
+            <configuration>
+                <targetClasses>
+                    <targetClass>comp5111.assignment.cut.Subject</targetClass>
+                </targetClasses>
+                <extraArgs>
+                    <arg>-Dclient_on_thread=true</arg>
+                    <arg>-Dsearch_budget=15</arg>
+                </extraArgs>
+                <memoryInMB>2048</memoryInMB>
+            </configuration>
             </plugin>
         </plugins>
     </build>
