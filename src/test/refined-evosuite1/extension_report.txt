@@ -1,0 +1,15 @@
+Extension Report — refined-evosuite1
+
+Strategy
+  Added 5 tests to evosuite1 (193 -> 198): 4 FAIL + 1 PASS, same as the others.
+
+Before vs After (best ranking per fault)
+  Fault   Before    After    Change
+  L205     11.5      2.5     -9.0
+  L344     42.5      8.0    -34.5
+  L488    104.0     68.5    -35.5
+  L615     94.0     64.0    -30.0
+
+  All improved. L615 reached rank 64, best across all four suites. Evosuite
+  suites benefit more than randoop because the original failure count was only 4,
+  so each added FAIL test has stronger relative effect.

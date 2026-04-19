@@ -1,0 +1,17 @@
+Fault Location
+  File: Subject.java, Line 488
+  Method: DateTimeAlgorithms.checkValidDate(int, int, int)
+  Faulty statement: return day > 0 && day < daysInMonth;
+
+Fixing Patch
+  Before: return day > 0 && day < daysInMonth;
+  After:  return day > 0 && day <= daysInMonth;
+
+Rationale
+  Off-by-one: "<" rejects the last day of the month (e.g. day=28 in a 28-day February). Should be "<=". This bug propagates to daysBetweenDates and daysBetweenDateStrings.
+
+Suspicious Score and Ranking
+  randoop0:   score=0.1259881577  rank=80.0
+  randoop1:   score=0.1529438226  rank=90.0
+  evosuite0:  score=0.2236067977  rank=95.5
+  evosuite1:  score=0.2041241452  rank=97.0

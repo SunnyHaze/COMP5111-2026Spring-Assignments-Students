@@ -1,0 +1,17 @@
+Fault Location
+  File: Subject.java, Line 344
+  Method: StringAlgorithms.extractIntInStr(String)
+  Faulty statement: return num;
+
+Fixing Patch
+  Before: return num;
+  After:  num = 0;
+
+Rationale
+  "return num" exits early at the first non-digit, returning the first digit sequence. Per the spec, extractIntInStr("1234a123") should return 123 (last sequence). Changing to "num = 0" resets the accumulator and keeps scanning to the end.
+
+Suspicious Score and Ranking
+  randoop0:   score=0.6000991981  rank=9.0
+  randoop1:   score=0.2631578947  rank=54.0
+  evosuite0:  score=0.3535533906  rank=44.5
+  evosuite1:  score=0.3535533906  rank=42.5

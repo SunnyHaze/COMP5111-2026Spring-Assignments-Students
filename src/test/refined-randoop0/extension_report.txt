@@ -1,0 +1,19 @@
+Extension Report — refined-randoop0
+
+Strategy
+  Added 5 tests to randoop0 (493 -> 498):
+  - 4 FAIL tests, each targeting one fault with a correct assertion that the buggy
+    code violates. This raises ef for the fault line, boosting its Ochiai score.
+  - 1 PASS test calling the same 4 methods on normal inputs. This raises ep for
+    false-positive lines and pushes their scores down.
+  Kept it to 5 tests to avoid NT penalty in scoring.
+
+Before vs After (best ranking per fault)
+  Fault   Before    After    Change
+  L205      6.5      7.5     +1.0
+  L344      9.0     10.0     +1.0
+  L488     81.0     78.0     -3.0
+  L615    663.0    100.0   -563.0
+
+  L205/L344 already ranked well, barely changed. L615 had ef=0 in the original
+  suite so its score was 0 — one FAIL test fixed that completely.

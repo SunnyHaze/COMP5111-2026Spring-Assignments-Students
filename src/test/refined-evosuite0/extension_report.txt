@@ -1,0 +1,16 @@
+Extension Report — refined-evosuite0
+
+Strategy
+  Added 5 tests to evosuite0 (193 -> 198): 4 FAIL + 1 PASS, same approach as
+  randoop. Impact is larger here because original suite only had 4 failures —
+  adding 4 more doubles the failure count.
+
+Before vs After (best ranking per fault)
+  Fault   Before    After    Change
+  L205     12.5      2.5    -10.0
+  L344     44.5      8.0    -36.5
+  L488    100.5     69.0    -31.5
+  L615     95.5     69.0    -26.5
+
+  All four improved substantially. L344 gained the most (-36.5) since ef
+  doubled from 1 to 2.
