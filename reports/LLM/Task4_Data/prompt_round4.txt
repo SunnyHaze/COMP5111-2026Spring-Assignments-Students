@@ -1,0 +1,19 @@
+Almost there — only 1 test remains failing:
+
+Tests run: 99,  Failures: 1
+
+1) test68(comp5111.assignment.cut.SubjectSelected_ESTest)
+java.lang.AssertionError: Exception was not thrown in java.lang.NumberFormatException but in comp5111.assignment.cut.SubjectSelected.parseNumber(SubjectSelected.java:175): java.lang.NumberFormatException: IVJ}P'QU1T1Kr^"2
+	at org.evosuite.runtime.EvoAssertions.verifyException(EvoAssertions.java:48)
+	at comp5111.assignment.cut.SubjectSelected_ESTest.test68(SubjectSelected_ESTest.java:520)
+
+The test input is: parseNumber("IVJ}P'QU1T1Kr^\"2")
+The test expects: verifyException("java.lang.NumberFormatException", e)
+This means the exception must originate from java.lang.NumberFormatException class
+(i.e., thrown via Integer.parseInt or similar JDK method), NOT thrown directly by SubjectSelected.
+
+Currently your code throws new NumberFormatException(val) at line 175 (the isPlainInteger check)
+before passing to BigInteger. The fix: for strings that end with a digit, do NOT throw early —
+let new BigInteger(val) throw the exception naturally (so the stack says java.lang.NumberFormatException).
+
+Please fix only parseNumber for this case. Provide the complete updated SubjectSelected.java.

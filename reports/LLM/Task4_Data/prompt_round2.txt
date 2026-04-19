@@ -1,0 +1,32 @@
+The following test failures occurred when running the EvoSuite test suite against your implementation.
+Please fix the code to make all tests pass. Provide the complete updated SubjectSelected.java.
+
+==== TEST FAILURES ====
+
+JUnit version 4.12
+Tests run: 99,  Failures: 5
+
+1) test12(comp5111.assignment.cut.SubjectSelected_ESTest)
+java.lang.AssertionError: Exception was not thrown in java.lang.NumberFormatException but in java.base/java.math.BigDecimal.<init>(BigDecimal.java:522): java.lang.NumberFormatException: Character & is neither a decimal digit number, decimal point, nor "e" notation exponential mark.
+	at org.evosuite.runtime.EvoAssertions.verifyException(EvoAssertions.java:48)
+	at comp5111.assignment.cut.SubjectSelected_ESTest.test12(SubjectSelected_ESTest.java:105)
+
+2) test39(comp5111.assignment.cut.SubjectSelected_ESTest)
+java.lang.AssertionError: Exception was not thrown in comp5111.assignment.cut.SubjectSelected but in java.base/java.math.BigDecimal.<init>(BigDecimal.java:581): java.lang.NumberFormatException: Character array is missing "e" notation exponential mark.
+	at org.evosuite.runtime.EvoAssertions.verifyException(EvoAssertions.java:48)
+	at comp5111.assignment.cut.SubjectSelected_ESTest.test39(SubjectSelected_ESTest.java:296)
+
+3) test48(comp5111.assignment.cut.SubjectSelected_ESTest)
+java.lang.AssertionError: Exception was not thrown in comp5111.assignment.cut.SubjectSelected but in java.base/java.math.BigDecimal.<init>(BigDecimal.java:522): java.lang.NumberFormatException: Character L is neither a decimal digit number, decimal point, nor "e" notation exponential mark.
+	at org.evosuite.runtime.EvoAssertions.verifyException(EvoAssertions.java:48)
+	at comp5111.assignment.cut.SubjectSelected_ESTest.test48(SubjectSelected_ESTest.java:376)
+
+4) test55(comp5111.assignment.cut.SubjectSelected_ESTest)
+java.lang.AssertionError: Exception was not thrown in comp5111.assignment.cut.SubjectSelected but in java.base/java.math.BigDecimal.<init>(BigDecimal.java:522): java.lang.NumberFormatException: Character  is neither a decimal digit number, decimal point, nor "e" notation exponential mark.
+	at org.evosuite.runtime.EvoAssertions.verifyException(EvoAssertions.java:48)
+	at comp5111.assignment.cut.SubjectSelected_ESTest.test55(SubjectSelected_ESTest.java:425)
+
+5) test68(comp5111.assignment.cut.SubjectSelected_ESTest)
+java.lang.AssertionError: Exception was not thrown in java.lang.NumberFormatException but in comp5111.assignment.cut.SubjectSelected.parseNumber(SubjectSelected.java:216): java.lang.NumberFormatException: IVJ}P'QU1T1Kr^"2
+	at org.evosuite.runtime.EvoAssertions.verifyException(EvoAssertions.java:48)
+	at comp5111.assignment.cut.SubjectSelected_ESTest.test68(SubjectSelected_ESTest.java:520)

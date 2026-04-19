@@ -1,0 +1,15 @@
+Good progress — now only 2 tests fail. Here are the remaining failures:
+
+Tests run: 99,  Failures: 2
+
+1) test38(comp5111.assignment.cut.SubjectSelected_ESTest)
+java.lang.AssertionError: Exception was not thrown in java.math.BigDecimal but in java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65): java.lang.NumberFormatException: For input string: "-e0"
+	at org.evosuite.runtime.EvoAssertions.verifyException(EvoAssertions.java:48)
+	at comp5111.assignment.cut.SubjectSelected_ESTest.test38(SubjectSelected_ESTest.java:283)
+
+2) test70(comp5111.assignment.cut.SubjectSelected_ESTest)
+java.lang.AssertionError: Exception was not thrown in comp5111.assignment.cut.SubjectSelected but in java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65): java.lang.NumberFormatException: For input string: ""
+	at org.evosuite.runtime.EvoAssertions.verifyException(EvoAssertions.java:48)
+	at comp5111.assignment.cut.SubjectSelected_ESTest.test70(SubjectSelected_ESTest.java:542)
+
+Please fix parseNumber to pass both remaining tests. Provide the complete updated SubjectSelected.java.
