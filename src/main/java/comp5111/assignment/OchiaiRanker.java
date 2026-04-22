@@ -80,7 +80,7 @@ public class OchiaiRanker {
         System.out.println("  Top 10:");
         for (int i = 0; i < Math.min(10, scores.size()); i++) {
             StmtScore s = scores.get(i);
-            System.out.printf("    rank=%.1f  score=%.6f  line=%-4s  %s%n", s.ranking, s.score, s.sourceLine, s.stmtId);
+            System.out.printf("    rank=%d  score=%.6f  line=%-4s  %s%n", s.ranking, s.score, s.sourceLine, s.stmtId);
         }
     }
 
@@ -100,7 +100,7 @@ public class OchiaiRanker {
             // i..j-1 have the same score
             // N = i (number of scores strictly higher)
             // M = j (number of scores >= this score)
-            double rank = (i + j + 1) / 2.0;
+            int rank = (int) Math.floor((i + j + 1) / 2.0);
             for (int k = i; k < j; k++) {
                 sorted.get(k).ranking = rank;
             }
@@ -162,7 +162,7 @@ public class OchiaiRanker {
         String jimpleText;
         String sourceLine;
         double score;
-        double ranking;
+        int ranking;
         int ef, ep, nf;
         List<String> failingTests;
 

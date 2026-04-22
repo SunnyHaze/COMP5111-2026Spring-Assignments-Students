@@ -11,7 +11,7 @@ Rationale
   Correct hash for "Sep" is (83<<16)|(101<<8)|112 = 5465456, but code has 5465466 (off by 10). Makes monAbbr2month("Sep") return -1 instead of 9, breaking September date handling.
 
 Suspicious Score and Ranking
-  randoop0:   score=0.0000000000  rank=663.0
-  randoop1:   score=0.1147078669  rank=99.5
-  evosuite0:  score=0.2236067977  rank=95.5
-  evosuite1:  score=0.2236067977  rank=94.0
+  randoop0:   score=0.0000000000  rank=670
+  randoop1:   score=0.1147078669  rank=100
+  evosuite0:  score=0.2236067977  rank=95
+  evosuite1:  score=0.2236067977  rank=94

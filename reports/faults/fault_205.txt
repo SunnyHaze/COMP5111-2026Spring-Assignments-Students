@@ -11,7 +11,7 @@ Rationale
   The extra "pos++" before "break" makes pos point past the terminator, so str.substring(0, pos) includes it in the result. e.g. parseToken("abc,def", {','}) returns "abc," instead of "abc".
 
 Suspicious Score and Ranking
-  randoop0:   score=0.6172133998  rank=6.5
-  randoop1:   score=0.7608859103  rank=13.0
-  evosuite0:  score=0.5000000000  rank=12.5
-  evosuite1:  score=0.5000000000  rank=11.5
+  randoop0:   score=0.6172133998  rank=7
+  randoop1:   score=0.7608859103  rank=13
+  evosuite0:  score=0.5000000000  rank=13
+  evosuite1:  score=0.5000000000  rank=12

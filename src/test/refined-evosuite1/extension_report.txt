@@ -5,10 +5,10 @@ Strategy
 
 Before vs After (best ranking per fault)
   Fault   Before    After    Change
-  L205     11.5      2.5     -9.0
-  L344     42.5      8.0    -34.5
-  L488    104.0     68.5    -35.5
-  L615     94.0     64.0    -30.0
+  L205       12        2    -10
+  L344       43        8    -35
+  L488       97       68    -29
+  L615       94       64    -30
 
   All improved. L615 reached rank 64, best across all four suites. Evosuite
   suites benefit more than randoop because the original failure count was only 4,

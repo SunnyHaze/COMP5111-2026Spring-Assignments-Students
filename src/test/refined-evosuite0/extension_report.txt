@@ -7,10 +7,10 @@ Strategy
 
 Before vs After (best ranking per fault)
   Fault   Before    After    Change
-  L205     12.5      2.5    -10.0
-  L344     44.5      8.0    -36.5
-  L488    100.5     69.0    -31.5
-  L615     95.5     69.0    -26.5
+  L205       13        2    -11
+  L344       45        8    -37
+  L488       95       69    -26
+  L615       95       69    -26
 
-  All four improved substantially. L344 gained the most (-36.5) since ef
+  All four improved substantially. L344 gained the most (-37) since ef
   doubled from 1 to 2.

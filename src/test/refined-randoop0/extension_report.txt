@@ -10,10 +10,10 @@ Strategy
 
 Before vs After (best ranking per fault)
   Fault   Before    After    Change
-  L205      6.5      7.5     +1.0
-  L344      9.0     10.0     +1.0
-  L488     81.0     78.0     -3.0
-  L615    663.0    100.0   -563.0
+  L205        7        7      0
+  L344       10       10      0
+  L488       80       78     -2
+  L615      670      100   -570
 
   L205/L344 already ranked well, barely changed. L615 had ef=0 in the original
   suite so its score was 0 — one FAIL test fixed that completely.
